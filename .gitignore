@@ -1,0 +1,28 @@
+# Data and experiment tracking
+data/
+mlruns/
+mlflow.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environments
+.venv/
+.env
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Credentials
+kaggle.json
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db

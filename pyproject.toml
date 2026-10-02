@@ -1,0 +1,44 @@
+[project]
+name = "m5-demand-forecasting"
+version = "0.1.0"
+description = "End-to-end demand forecasting pipeline on the M5 (Walmart) dataset"
+readme = "README.md"
+authors = [
+    { name = "Afonso Sousa", email = "afonsoguilherme.fa@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "mlflow>=3.16.1",
+    "optuna>=5.0.0",
+    "pandas>=3.0.6",
+    "pyarrow>=25.0.1",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.9.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+    "kaggle>=2.2.4",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
